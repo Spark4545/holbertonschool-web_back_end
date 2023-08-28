@@ -6,8 +6,7 @@
 from typing import Iterable, Sequence, List, Union, Tuple
 
 
-def element_length(lst: Iterable[Sequence])\
-        -> List[Tuple[Sequence, int]]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """
         Args:
             lst: Sequence of list

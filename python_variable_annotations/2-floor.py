@@ -3,6 +3,7 @@
     Module with typing Python
 """
 
+
 def floor(n: float) -> int:
     """
     Args:

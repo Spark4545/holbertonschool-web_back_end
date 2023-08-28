@@ -3,6 +3,7 @@
     Module with typing Python
 """
 
+
 def concat(str1: str, str2: str) -> str:
     """
     Args:

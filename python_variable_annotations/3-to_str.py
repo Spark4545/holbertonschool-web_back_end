@@ -3,6 +3,7 @@
     Module with typing Python
 """
 
+
 def to_str(n: float) -> str:
     """
     Args:
