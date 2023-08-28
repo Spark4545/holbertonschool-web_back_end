@@ -18,7 +18,7 @@ async def wait_n(n: int = 0, max_delay: int = 10) -> List[float]:
     Returns:
         timings
     """
-     delays = []
+    delays = []
 
     async def collect_delays():
         delay = await wait_random(max_delay)
