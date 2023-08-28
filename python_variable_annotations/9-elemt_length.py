@@ -3,16 +3,16 @@
     Module with typing Python
 """
 
-from typing import Iterable, Sequence, List, Union, Tuple
+from typing import Iterable, Sequence, List, Tuple
 
 
 def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
-    """
-        Args:
-            lst: Sequence of list
+    """element_length
 
-        Return:
-            List of tuple of sequence of integers
-    """
+    Args:
+        lst (Iterable[Sequence]): all element of the list
 
+    Returns:
+        List ([Tuple, int]) : list of tuple and int
+    """
     return [(i, len(i)) for i in lst]
