@@ -18,14 +18,12 @@ async def wait_n(n: int = 0, max_delay: int = 10) -> List[float]:
     Returns:
         timings
     """
-    delays: List[Float] = []
-    tasks = List = []
+     delays = []
 
-    for _ in range(n):
-        tasks.append(wait_random(max_delay))
-
-    for task in asyncio.as_completed((tasks)):
-        delay = wait task
+    async def collect_delays():
+        delay = await wait_random(max_delay)
         delays.append(delay)
 
-    return delays
+    await asyncio.gather(*(collect_delays() for _ in range(n)))
+
+    return sorted(delays)
