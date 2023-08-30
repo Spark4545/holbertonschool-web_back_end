@@ -1,24 +1,23 @@
 #!/usr/bin/env python3
-""" Async Generator """
-
-import time
+"""
+1. Async Comprehensions
+"""
 import asyncio
 
 
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
-async def measure_time() -> float:
-    """
-    Args:
-        Void
+async def measure_runtime() -> float:
+    """measure_runtime
 
     Returns:
-        float random
+        float: Measure time to run async_comprehension 4 times
     """
-    first_time = time.perf_counter()
-    tasks = [async_comprehension() for _ in range(4)]
-    await asyncio.gather(*tasks)
-    elapsed = time.perf_counter()
-
-    return (elapsed - first_time)
+    start_time = asyncio.get_event_loop().time()
+    await asyncio.gather(async_comprehension(),
+                         async_comprehension(),
+                         async_comprehension(),
+                         async_comprehension())
+    end_time = asyncio.get_event_loop().time()
+    return end_time - start_time
