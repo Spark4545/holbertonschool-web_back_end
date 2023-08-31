@@ -14,9 +14,4 @@ def sum_mixed_list(mxd_list: List(Union[int, float])) -> float:
         Returns:
             sum of items in mxd_list
     """
-    total = 0.0
-
-    for item in mxd_list:
-        total += item
-
-    return total
+    return sum(mxd_list)
