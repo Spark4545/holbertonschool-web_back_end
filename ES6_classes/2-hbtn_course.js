@@ -43,7 +43,7 @@ export default class HolbertonCourse {
     }
     return value;
   }
-  
+
   validateArray(value, attributeName) {
     if (!Array.isArray(value)) {
       throw new TypeError(`${attributeName} must be an array`);
